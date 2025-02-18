@@ -1,0 +1,117 @@
+/* Estilos gerais */
+body {
+  font-family: 'Dancing Script', cursive;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Seção 1: Galeria de Fotos */
+#gallery {
+  height: 100vh;  /* Altura total da tela */
+  position: relative;
+  overflow: hidden;  /* Impede que as imagens saiam da área visível */
+}
+
+.photo-slider {
+  display: flex;
+  width: 100%;  /* Cada slide ocupará 100% da largura da tela */
+  transition: transform 0.5s ease-in-out;  /* Efeito suave ao mudar de imagem */
+}
+
+.slide {
+  width: 100%;  /* Cada slide ocupará 100% da largura da tela */
+  height: 100vh;  /* Cada slide ocupará 100% da altura da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: auto;  /* A largura da imagem será ajustada automaticamente */
+  height: 100%;  /* A altura da imagem ocupará toda a altura do slide */
+  object-fit: contain;  /* A imagem será redimensionada sem cortar */
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.nav-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay-text h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Seção 2: Declaração e Contador */
+#declaration {
+  display: flex;
+  flex-direction: column;  /* Empilhar as colunas em uma linha */
+  align-items: center;
+  padding: 50px 10%;
+  background: rgba(0, 0, 0, 0.6);
+  border-top: 5px solid #fff;
+  color: white;
+}
+
+.column {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.declaration-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.timer {
+  text-align: center;
+}
+
+.timer p {
+  font-size: 1.5rem;
+}
+
+#time {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff7e5f;
+  margin-top: 10px;
+}
